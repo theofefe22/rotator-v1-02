@@ -9,20 +9,21 @@ Dans le cadre de l'obtention du BUT Réseaux et Télécommunications, il nous a 
 ## Vidéo de démonstration
 https://youtu.be/I_M9lhja_IE
 
+## Exemples
+
 ### Exemple d'architecture
 L'architecture voulue par le professeur est dite en mersh, tout le monde est relié ensemble.
+
+### Exemple de circuit d'un message
+Le client est le seul à décider de la route que va prendre le message. Aucun des routeurs ne connaît ni le récepteur, ni le transmetteur dudit message. Chaque routeur ne connaît que celui qui le précède et qui le succède.
+
 ```mermaid
 graph TD;
-    Master<-->Routeur-1;
-    Master<-->Routeur-2;
-    Master<-->Routeur-3;
-    Master<-->Client;
     Routeur-1<-->Routeur-2;
-    Routeur-1<-->Routeur-3
+    Routeur-1<-->Routeur-3;
     Routeur-1<-->Client;
-    Routeur-2<-->Routeur-3
+    Routeur-2<-->Routeur-3;
     Routeur-2<-->Client;
     Routeur-3<-->Client;
 ```
-### Exemple de circuit d'un message
-Le client est le seul à décider de la route que va prendre le message. Aucun des routeurs ne connaît ni le récepteur, ni le transmetteur dudit message. Chaque routeur ne connaît que celui qui le précède et qui le succède.
+
